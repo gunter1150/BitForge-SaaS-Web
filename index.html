@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitForge | Your SaaS Best Choice</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="font-inter bg-white">
+
+    <!-- Header / Navigasi Bar (Disesuaikan untuk desain baru) -->
+    <header class="header">
+        <div class="container header-content">
+            <!-- Logo Agensi -->
+            <a href="index.html" class="logo">
+                <img src="https://placehold.co/150x40/141720/ADFF2F?text=BITFORGE" alt="WEB ROCKET Logo" class="logo-img">
+            </a>
+
+            <!-- Navigasi Utama (Untuk Desktop) -->
+            <nav class="nav-desktop">
+                <a href="about.html">About</a>
+                <div class="dropdown">
+                    <a href="#" class="has-dropdown">
+                        Services
+                        <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="/services/ui-ux.html">UI/UX Design</a>
+                        <a href="/services/brand-design.html">Brand Design</a>
+                        <a href="/services/web-dev.html">Webflow Development</a>
+                        <a href="/services/no-code-dev.html">No-Code Development</a>
+                    </div>
+                </div>
+                <a href="portofolio.html">Portofolio</a>
+                <a href="karir.html">Karir</a>
+                <a href="dapatkankuota.html">Dapatkan Kuota</a>
+            </nav>
+
+            <!-- Tombol CTA Header (Untuk Desktop) -->
+            <div class="hidden-mobile">
+                <button class="header-cta-button">
+                    Jadwalkan Sekarang
+                </button>
+            </div>
+
+            <!-- Tombol Hamburger (Untuk Mobile) -->
+            <button class="hamburger-button" aria-label="Toggle navigation">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+
+        <!-- Menu Mobile (Tersembunyi secara default, akan diaktifkan dengan JS) -->
+        <div id="mobile-menu" class="mobile-menu">
+            <nav class="mobile-menu-nav">
+                <a href="about.html">About</a>
+                <a href="#">Layanan</a>
+                <a href="#">Portofolio</a>
+                <a href="#">Karir</a>
+                <a href="#">Dapatkan Kuota</a>
+                <button class="cta-button-mobile">
+                    Jadwalkan Sekarang
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Bagian Hero (Disesuaikan agar sesuai dengan gambar) -->
+    <section class="hero-section">
+        <div class="container hero-content">
+            <h1 class="hero-title">
+                Where Stunning Design Meets Flawless Functionality
+            </h1>
+            <p class="hero-description">
+                We craft high-converting websites, apps, and brands for startups, agencies, and businesses that refuse to settle for good enough.
+            </p>
+            <button class="hero-button">
+                Book a Meeting
+            </button>
+        </div>
+    </section>
+
+    <!-- Bagian Gambar Besar di Bawah Hero (Disesuaikan agar sesuai dengan gambar) -->
+    <section class="image-showcase-section">
+        <div class="image-showcase-container">
+            <iframe width="1000" height="600" src="https://www.youtube.com/embed/L1MfSwtl-8Y?si=fPYjIMkSXRKs2Tih" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <!-- <img src="https://placehold.co/1000x600/2F3644/ffffff?text=Tim+Bekerja" alt="Tim Bekerja" class="showcase-image"> -->
+        </div>
+    </section>
+
+    <!-- Bagian Logo Klien (Disesuaikan agar sesuai dengan gambar) -->
+    <section class="client-logos-section">
+        <div class="container client-logos-grid">
+            <img src="https://placehold.co/120x40/141720/ffffff?text=bento" alt="Logo Klien Bento" class="client-logo">
+            <img src="https://placehold.co/120x40/141720/ffffff?text=zerod" alt="Logo Klien Zerod" class="client-logo">
+            <img src="https://placehold.co/120x40/141720/ffffff?text=MINYTO" alt="Logo Klien Minyto" class="client-logo">
+            <img src="https://placehold.co/120x40/141720/ffffff?text=abillion" alt="Logo Klien Abillion" class="client-logo">
+            <img src="https://placehold.co/120x40/141720/ffffff?text=Limobuz" alt="Logo Klien Limobuz" class="client-logo">
+            <img src="https://placehold.co/120x40/141720/ffffff?text=Pironz" alt="Logo Klien Pironz" class="client-logo">
+        </div>
+    </section>
+
+    
+
+    <!-- Bagian Tentang Kami -->
+    <section class="short-about-section">
+        <div class="container short-about-content">
+            <!-- Konten Teks Bagian Tentang Kami -->
+            <div class="short-about-text">
+                <h2 class="short-about-title">
+                    Unforgettable, Websites, Brands & Visuals for Bold Visionaries.
+                </h2>
+                <p class="short-about-description">
+                    We're not your typical design agency. Founded in 2014, we're a collective of designers, developers, and strategists who believe great digital experiences should be beautiful, functional, and human-centered. From startups to global brands, we help ambitious businesses stand out.
+                </p>
+                <button class="short-about-button">
+                    Know More About Us
+                </button>
+            </div>
+            
+            <!-- Gambar Bagian Tentang Kami -->
+            <div class="short-about-image">    
+                <img src="https://png.pngtree.com/thumb_back/fh260/background/20240912/pngtree-beautiful-natural-scenery-image_16179215.jpg" alt="Tim Kerja" class="short-about-image">
+            </div>
+        </div>
+    </section>
+
+    <hr class="container">
+
+    <!-- Bagian Statistik (NEWLY ADDED/MODIFIED) -->
+    <section class="stats-section">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <div class="stat-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-2.485 0-4.5 2.015-4.5 4.5S9.515 17 12 17s4.5-2.015 4.5-4.5S14.485 8 12 8z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 1c-4.971 0-9 4.029-9 9s4.029 9 9 9 9-4.029 9-9-4.029-9-9-9zm0 16c-3.866 0-7-3.134-7-7s3.134-7 7-7 7 3.134 7 7-3.134 7-7 7z"></path></svg>
+                </div>
+                <h3 class="stat-number">72</h3>
+                <p class="stat-description">Hour Prototype Guarantee</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 class="stat-number">100+</h3>
+                <p class="stat-description">Brands Transformed</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.206 5 7.5 5S4.168 5.477 3 6.253M12 6.253c1.168-.776 2.894-1.253 4.5-1.253 1.606 0 3.232.477 4.5 1.253m-13 13C5.168 18.523 6.794 19 8.5 19s3.332-.477 4.5-1.253m-13 13V6.253"></path></svg>
+                </div>
+                <h3 class="stat-number">10+</h3>
+                <p class="stat-description">Years of Pixel-Perfect Craft</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Layanan Baru (Services We Offer - NEWLY ADDED) -->
+    <section class="services-we-offer-section">
+        <div class="container">
+            <h2 class="services-we-offer-title">Services We Offer</h2>
+            <div class="services-we-offer-grid">
+                <!-- UI/UX Design Card -->
+                <div class="service-card-new">
+                    <!-- <div class="service-card-number">1.</div> -->
+                    <h3 class="service-card-number">1. UI/UX Design</h3>
+                    <p class="service-card-description">
+                        Interfaces that delight users and drive conversions. We design with outcomes in mind.
+                    </p>
+                    <ul class="service-feature-list">
+                        <li class="service-feature-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            User flows that boost engagement.
+                        </li>
+                        <li class="service-feature-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Mobile-first, award-worthy interfaces.
+                        </li>
+                        <li class="service-feature-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Prototypes in 72 hours or less.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Brand Design Card -->
+                <div class="service-card-new">
+                    <!-- <div class="service-card-number">2.</div> -->
+                    <h3 class="service-card-number">2. Brand Design</h3>
+                    <p class="service-card-description">
+                        Visual identities that command attention and build trust. Logos, style guides, and assets crafted to tell your story.
+                    </p>
+                    <ul class="service-feature-list">
+                        <li class="service-feature-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Logos with hidden storytelling.
+                        </li>
+                        <li class="service-feature-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Visual identities built to scale.
+                        </li>
+                        <li class="service-feature-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Style guides even your interns can use.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Webflow Development Card -->
+                <div class="service-card-new">
+                    <!-- <div class="service-card-number">3.</div> -->
+                    <h3 class="service-card-number">3. Webflow Development</h3>
+                    <p class="service-card-description">
+                        Websites that load fast, rank higher, and grow with you. No bloated code—just seamless Webflow experiences.
+                    </p>
+                    <ul class="service-feature-list">
+                        <li class="service-feature-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            90+ PageSpeed scores guaranteed.
+                        </li>
+                        <li class="service-feature-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            SEO-optimized out of the box.
+                        </li>
+                        <li class="service-feature-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Editable CMS for non-tech teams.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- No-Code Development Card -->
+                <div class="service-card-new">
+                    <!-- <div class="service-card-number">4.</div> -->
+                    <h3 class="service-card-number">4. No-Code Development</h3>
+                    <p class="service-card-description">
+                        Launch functional MVPs without engineering headaches. Solutions in weeks, not months.
+                    </p>
+                    <ul class="service-feature-list">
+                        <li class="service-feature-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Bubble/FlutterFlow MVPs in 4 weeks.
+                        </li>
+                        <li class="service-feature-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Complex workflows without engineers.
+                        </li>
+                        <li class="service-feature-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            API integrations that actually work.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Testimonial (NEWLY ADDED) -->
+    <section class="testimonial-section">
+        <div class="container">
+            <h2 class="testimonial-title">What Clients Say About Us</h2>
+            <div class="testimonial-grid">
+                <!-- Testimonial Card 1 (Jovalta) -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.071 3.292a1 1 0 00.95.69h3.46c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.46a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.071 3.292a1 1 0 00.95.69h3.46c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.46a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.071 3.292a1 1 0 00.95.69h3.46c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.46a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.071 3.292a1 1 0 00.95.69h3.46c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.46a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.071 3.292a1 1 0 00.95.69h3.46c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.46a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="testimonial-quote">
+                        "We struggled with user drop-offs for months. Web Rocket redesigned our dashboard with intuitive workflows, and our retention skyrocketed by 40% in 30 days. Their team actually listens to users—no ego, just data-driven design."
+                    </p>
+                    <div class="testimonial-author-info">
+                        <img src="https://placehold.co/48x48/F3F4F6/6B7280?text=SK" alt="Sarah K." class="testimonial-author-avatar">
+                        <div>
+                            <p class="testimonial-author-name">Jovalta</p>
+                            <p class="testimonial-author-title">Universitas Dian Nusantara</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card 2 (Sarah K.) -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.071 3.292a1 1 0 00.95.69h3.46c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.46a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.071 3.292a1 1 0 00.95.69h3.46c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.46a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.071 3.292a1 1 0 00.95.69h3.46c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.46a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.071 3.292a1 1 0 00.95.69h3.46c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.46a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.071 3.292a1 1 0 00.95.69h3.46c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.46a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="testimonial-quote">
+                        "We struggled with user drop-offs for months. Web Rocket redesigned our dashboard with intuitive workflows, and our retention skyrocketed by 40% in 30 days. Their team actually listens to users—no ego, just data-driven design."
+                    </p>
+                    <div class="testimonial-author-info">
+                        <img src="https://placehold.co/48x48/F3F4F6/6B7280?text=SK" alt="Sarah K." class="testimonial-author-avatar">
+                        <div>
+                            <p class="testimonial-author-name">Sarah K.</p>
+                            <p class="testimonial-author-title">CEO of SaaSFlow</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card 3 (David R) -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.071 3.292a1 1 0 00.95.69h3.46c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.46a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.071 3.292a1 1 0 00.95.69h3.46c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.46a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.071 3.292a1 1 0 00.95.69h3.46c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.46a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.071 3.292a1 1 0 00.95.69h3.46c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.46a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.071 3.292a1 1 0 00.95.69h3.46c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.46a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="testimonial-quote">
+                        "Our old branding looked like every other brewery. Web Rocket gave us a bold, hoppy-inspired identity that's now on merch, trucks, and even trade shows. Sales jumped 65% post-rebrand—worth every penny."
+                    </p>
+                    <div class="testimonial-author-info">
+                        <img src="https://placehold.co/48x48/F3F4F6/6B7280?text=DR" alt="David R." class="testimonial-author-avatar">
+                        <div>
+                            <p class="testimonial-author-name">David R.</p>
+                            <p class="testimonial-author-title">Founder of BrewCraft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Ajakan Bertindak (CTA) -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">
+                Siap Memulai Proyek Digital Anda?
+            </h2>
+            <p class="cta-description">
+                Jangan lewatkan kesempatan untuk membawa bisnis Anda ke tingkat selanjutnya. Mari diskusikan ide Anda hari ini!
+            </p>
+            <button class="cta-button">
+                Jadwalkan Konsultasi Gratis
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main-content">
+                <!-- Kolom 1: Logo & Deskripsi -->
+                <div class="footer-col footer-logo-col">
+                    <a href="index.html"> <img src="https://placehold.co/150x40/141720/ADFF2F?text=BITFORGE" alt="WEB ROCKET Logo" class="logo-img"></a>
+                    <p class="footer-description">
+                        We craft high-performance digital experiences that drive real business results.
+                    </p>
+                    <div class="footer-social-icons">
+                        <!-- Placeholder for social icons -->
+                        <div class="footer-social-icon">
+                            <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10v4h3v7h4v-7h3l1-4h-4V7a1 1 0 011-1h3V2h-3a5 5 0 00-5 5v3H7z"></path></svg>
+                        </div>
+                        <div class="footer-social-icon">
+                            <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.46 6c-.77.34-1.6.56-2.46.66.89-.53 1.57-1.37 1.89-2.37-.83.49-1.75.83-2.73 1.02-.79-.84-1.92-1.37-3.17-1.37-2.39 0-4.34 1.95-4.34 4.34 0 .34.04.67.11.98-3.6-.18-6.8-1.9-8.94-4.57-.37.64-.58 1.39-.58 2.18 0 1.5.77 2.81 1.94 3.59-.72-.02-1.39-.22-1.98-.55v.05c0 2.11 1.5 3.88 3.5 4.29-.37.1-.76.15-1.16.15-.28 0-.55-.03-.82-.08.56 1.75 2.18 3.02 4.1 3.06-1.49 1.17-3.37 1.87-5.41 1.87-.35 0-.69-.02-1.03-.06C2.65 20.46 4.93 21 7.37 21c7.22 0 11.17-5.96 11.17-11.17 0-.17-.01-.34-.01-.51.77-.56 1.45-1.26 1.98-2.06z"></path></svg>
+                        </div>
+                        <div class="footer-social-icon">
+                            <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.78 2H4.22C3.54 2 3 2.54 3 3.22v17.56C3 21.46 3.54 22 4.22 22h15.56c.68 0 1.22-.54 1.22-1.22V3.22C21 2.54 20.46 2 19.78 2zM12 17.5c-2.485 0-4.5-2.015-4.5-4.5s2.015-4.5 4.5-4.5 4.5 2.015 4.5 4.5-2.015 4.5-4.5 4.5zm5.5-8.5c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z"></path></svg>
+                        </div>
+                        <div class="footer-social-icon">
+                            <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2.002 10.662C2.002 11.69 2.002 12.718 2.002 13.746H5.438C5.438 12.718 5.438 11.69 5.438 10.662H2.002zM7.332 2H16.67A7.332 7.332 0 0124 9.332v5.336A7.332 7.332 0 0116.668 22H7.332A7.332 7.332 0 010 14.668V9.332A7.332 7.332 0 017.332 2zm2.775 8.795L12 11.41l1.893-.615 2.128-1.554-1.282-2.128c-.29-.48-.667-.857-1.147-1.147-.48-.29-.982-.48-1.52-.48s-1.04.19-1.52.48c-.48.29-.857.667-1.147 1.147L8.107 9.84zm-4.707 3.868h-2.129v-5.336h2.129v5.336zm14.707 0h-2.129v-5.336h2.129v5.336z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolom 2: Quick Links -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Quick Links</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kolom 3: Services -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Services</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Brand Design</a></li>
+                        <li><a href="#">Webflow Development</a></li>
+                        <li><a href="#">No-Code Development</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kolom 4: Newsletter -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Get the Latest Inspiration</h4>
+                    <div class="footer-newsletter">
+                        <input type="email" placeholder="Enter your email *">
+                        <button type="submit">Subscribe Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+            <p class="footer-copyright-bottom">&copy; 2025 Agency All rights reserved</p>
+        </div>
+    </footer>
+
+
+    <!-- Script untuk Toggle Menu Mobile (tetap sama) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('.hamburger-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton) { // Pastikan tombol ada sebelum menambahkan event listener
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('active');
+                });
+            }
+
+            // Sembunyikan menu mobile ketika tautan diklik (jika navigasi satu halaman)
+            if (mobileMenu) {
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        if (mobileMenu.classList.contains('active')) {
+                            mobileMenu.classList.remove('active');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

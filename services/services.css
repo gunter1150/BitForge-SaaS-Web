@@ -1,0 +1,474 @@
+/* Definisi variabel CSS untuk warna */
+:root {
+            --primary-blue: #4F46E5;
+            --secondary-orange: #F97316;
+            --dark-text: #1F2937;
+            --light-bg: #F9FAFB;
+            --gray-text: #6B7280;
+            --white: #FFFFFF;
+            --indigo-700: #4338CA; /* Untuk hover primary blue */
+            --orange-600: #EA580C; /* Untuk hover secondary orange */
+            --gray-100: #F3F4F6; /* Untuk border kartu */
+            --darkest-bg: #141720; /* Warna latar belakang hero baru, sangat gelap */
+            --border-gray: #4B5563; /* Warna abu-abu untuk border gambar */
+            --nav-link-color: #CBD5E1; /* Warna teks navigasi yang lebih terang */
+            --rating-star-color: #FFD700; /* Warna bintang untuk rating */
+            --footer-bg: #F2F2F2; /* Latar belakang footer */
+            --footer-text-color: #333333; /* Warna teks gelap di footer */
+            --footer-link-color: #6B7280; /* Warna link di footer */
+            --footer-input-bg: #E5E7EB; /* Latar belakang input footer */
+            --footer-subscribe-btn: #1F2937; /* Warna tombol subscribe footer */
+            --carousel-dot-inactive: #D1D5DB; /* Warna dot carousel tidak aktif */
+            --carousel-dot-active: #1F2937; /* Warna dot carousel aktif */
+            --form-input-bg: #F9FAFB; /* Latar belakang input lebih gelap, seperti di gambar */
+            --form-input-border: #D1D5DB; /* Border input yang lebih jelas */
+            --form-checkbox-bg: #F9FAFB; /* Latar belakang checkbox */
+            --form-checkbox-border: #D1D5DB; /* Border checkbox */
+            --dropdown-bg: #FFFFFF; /* Latar belakang dropdown */
+            --dropdown-border: #E5E7EB; /* Border dropdown */
+            --dropdown-link-color: #374151; /* Warna teks link dropdown */
+            --dropdown-link-hover-bg: #F3F4F6; /* Background hover link dropdown */
+            --dropdown-shadow: rgba(0, 0, 0, 0.1);            
+        }
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--gray-text);
+    background-color: var(--white);
+    margin: 0;
+    line-height: 1.5;
+}
+
+hr{
+    size: 30;
+    border-top: 1px solid #000000; /* border-gray-300 */
+    margin-top: 3rem; /* mt-12 */
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem; /* px-4 */
+}
+
+/* Header */
+.header {
+    /* background-color: var(--darkest-bg); Ubah warna header agar sesuai dengan hero */
+    background-color: darkblue;
+    box-shadow: none; /* Hapus shadow */
+    padding-top: 1rem; /* py-4 */
+    padding-bottom: 1rem; /* py-4 */
+    position: relative;
+    z-index: 10;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    /* Gaya logo asli dari gambar */
+    height: 40px; /* Tinggi logo */
+    width: auto;
+}
+
+/* Navigasi Desktop (diperbarui) */
+.nav-desktop {
+    display: none; /* Sembunyikan secara default */
+    gap: 1.5rem; /* space-x-6 */
+    font-size: 1rem; /* text-base */
+    font-weight: 500; /* font-medium */
+    align-items: center;
+}
+@media (min-width: 768px) { /* md:flex */
+    .nav-desktop {
+display: flex;
+    }
+}
+
+.nav-desktop a {
+    color: var(--nav-link-color); /* Warna teks navigasi yang lebih terang */
+    text-decoration: none;
+    transition: color 300ms ease;
+    position: relative; /* Untuk dropdown arrow */
+    display: flex;
+    align-items: center;
+}
+
+.nav-desktop a:hover {
+    color: var(--white); /* Putih saat hover */
+}
+
+/* Panah Dropdown */
+.nav-desktop a.has-dropdown svg {
+    width: 0.75rem; /* w-3 */
+    height: 0.75rem; /* h-3 */
+    margin-left: 0.25rem; /* ml-1 */
+    transition: transform 300ms ease;
+}
+.nav-desktop a.has-dropdown:hover svg {
+    transform: rotate(180deg);
+}
+/* Dropdown Menu untuk Services (NEWLY ADDED) */
+.dropdown {
+    position: relative;
+}        
+
+.dropdown-content {
+            opacity: 0; /* Mulai dengan tidak terlihat */
+            visibility: hidden; /* Sembunyikan dari interaksi mouse */
+            transition: opacity 0.3s ease, visibility 0.3s ease; /* Transisi untuk opacity dan visibility */
+            position: absolute;
+            background-color: var(--dropdown-bg);
+            min-width: 160px; /* Lebar minimum dropdown */
+            box-shadow: 0 8px 16px 0 var(--dropdown-shadow);
+            border: 1px solid var(--dropdown-border);
+            border-radius: 0.5rem; /* rounded-lg */
+            z-index: 1;
+            top: 100%; /* Tempatkan di bawah link parent */
+            left: 50%; /* Pusatkan di bawah link */
+            transform: translateX(-50%); /* Penyesuaian untuk pemusatan */
+            overflow: hidden; /* Pastikan sudut membulat */
+            pointer-events: none; /* Nonaktifkan interaksi saat tidak terlihat */
+        }
+
+        .dropdown-content a {
+            color: var(--dropdown-link-color);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left; /* Rata kiri teks link */
+            font-weight: 500; /* font-medium */
+            transition: background-color 0.1s ease, color 0.1s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: var(--dropdown-link-hover-bg);
+            color: var(--dark-text); /* Ubah warna teks saat hover */
+        }
+
+        .dropdown:hover .dropdown-content {
+            opacity: 1; /* Tampilkan dengan transisi */
+            visibility: visible; /* Aktifkan interaksi */
+            pointer-events: auto; /* Aktifkan interaksi mouse */
+        }
+
+
+/* Tombol CTA Header (diperbarui) */
+        .header-cta-button {
+            background-color: var(--white);
+            color: var(--darkest-bg);
+            padding: 0.75rem 1.5rem; /* px-6 py-3 */
+            border-radius: 9999px; /* rounded-full */
+            font-weight: 600; /* font-semibold */
+            font-size: 1rem; /* text-base */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: background-color 300ms ease;
+            border: none;
+            cursor: pointer;
+            white-space: nowrap; /* Pastikan teks tidak patah */
+        }
+        .header-cta-button:hover {
+            background-color: var(--gray-100);
+        }
+        .header-cta-button.hidden-mobile {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            .header-cta-button.hidden-mobile {
+                display: block;
+            }
+        }
+
+        /* Tombol Hamburger (sembunyikan untuk desain ini di desktop, tampilkan di mobile) */
+        .hamburger-button {
+            display: block; /* Tampilkan di mobile */
+            color: var(--white); /* Warna hamburger putih */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+        .hamburger-button svg {
+            width: 2rem; /* w-8 */
+            height: 2rem; /* h-8 */
+        }
+        @media (min-width: 768px) {
+            .hamburger-button {
+                display: none;
+            }
+        }
+
+        /* Menu Mobile (diperbarui) */
+        .mobile-menu {
+            display: none; /* hidden */
+            background-color: var(--darkest-bg);
+            padding-top: 1rem; /* py-4 */
+            padding-bottom: 1rem; /* py-4 */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-lg */
+            position: absolute;
+            width: 100%;
+            top: 100%; /* top-full */
+            left: 0;
+        }
+        .mobile-menu.active { /* Class to show/hide with JS */
+            display: block;
+        }
+        .mobile-menu-nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem; /* space-y-3 */
+            padding-left: 1rem; /* px-4 */
+            padding-right: 1rem; /* px-4 */
+            font-size: 1.125rem; /* text-lg */
+        }
+        .mobile-menu-nav a {
+            display: block;
+            color: var(--nav-link-color);
+            text-decoration: none;
+            padding-top: 0.5rem; /* py-2 */
+            padding-bottom: 0.5rem; /* py-2 */
+            transition: color 300ms ease;
+            width: 100%;
+            text-align: center;
+        }
+        .mobile-menu-nav a:hover {
+            color: var(--white);
+        }
+        .mobile-menu-nav .cta-button-mobile {
+            background-color: var(--white);
+            color: var(--darkest-bg);
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px; /* rounded-full */
+            width: 100%;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: background-color 300ms ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1.125rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .mobile-menu-nav .cta-button-mobile:hover {
+            background-color: var(--gray-100);
+        }
+
+        /*
+    Bagian-bagian lainnya dari halaman sebelumnya (CTA, Footer)
+    akan mengikuti setelah bagian ini, namun untuk fokus pada permintaan user
+    mengenai bagian atas, saya akan menyertakannya di sini.
+    Anda bisa menghapus atau menyusun ulang sesuai kebutuhan.
+*/
+.cta-section, .footer {
+    /* Gaya dasar yang dipertahankan */
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.cta-section {
+    /* background: linear-gradient(to right, #6D28D9, #7C3AED); */
+    background-color: darkblue;
+    color: var(--white);
+    text-align: center;
+}
+.footer {
+    background-color: var(--dark-text);
+    color: var(--gray-text);
+}
+
+.cta-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.25;
+}
+@media (min-width: 768px) {
+    .cta-title {
+font-size: 3rem;
+    }
+}
+
+.cta-description {
+    font-size: 1.125rem;
+    margin-bottom: 2.5rem;
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+    line-height: 1.625;
+}
+@media (min-width: 768px) {
+    .cta-description {
+font-size: 1.25rem;
+    }
+}
+
+.cta-button {
+    /* background-color: var(--secondary-orange); */
+    /* color: var(--white); */
+    background-color: #039b38;
+    color: var(--white);    
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: background-color 300ms ease;
+    border: none;
+    cursor: pointer;
+}
+.cta-button:hover {
+    /* background-color: var(--orange-600); */
+    background-color: #01b140;
+
+}
+
+       /* Footer (NEWLY MODIFIED) */
+.footer {
+    background-color: var(--footer-bg); /* Latar belakang abu-abu terang */
+    padding-top: 4rem; /* py-16 */
+    padding-bottom: 1.5rem; /* py-6 */
+    color: var(--footer-text-color);
+    text-align: center;
+}
+
+.footer-main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem; /* gap-12 */
+    text-align: center;
+    margin-bottom: 3rem; /* mb-12 */
+}
+@media (min-width: 768px) {
+    .footer-main-content {
+grid-template-columns: repeat(4, 1fr); /* grid-cols-4 */
+text-align: left;
+    }
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Pusatkan di mobile */
+}
+@media (min-width: 768px) {
+    .footer-col {
+align-items: flex-start; /* Rata kiri di desktop */
+    }
+}
+
+.footer-logo-col .logo-img {
+    height: 40px;
+    width: auto;
+    filter: invert(10%); /* Membuat logo lebih gelap di footer terang */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+.footer-description {
+    font-size: 0.875rem; /* text-sm */
+    line-height: 1.6;
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 1rem; /* space-x-4 */
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+
+.footer-social-icon {
+    width: 2.5rem; /* w-10 */
+    height: 2.5rem; /* h-10 */
+    background-color: var(--footer-subscribe-btn); /* Latar belakang gelap */
+    border-radius: 9999px; /* rounded-full */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    transition: background-color 300ms ease;
+}
+.footer-social-icon:hover {
+    background-color: var(--darkest-bg);
+}
+.footer-social-icon svg {
+    width: 1.25rem; /* w-5 */
+    height: 1.25rem; /* h-5 */
+}
+
+.footer-col-title {
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 700; /* font-bold */
+    color: var(--dark-text);
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+
+.footer-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* space-y-3 */
+}
+
+.footer-links-list a {
+    color: var(--footer-link-color);
+    text-decoration: none;
+    font-size: 0.875rem; /* text-sm */
+    transition: color 300ms ease;
+}
+.footer-links-list a:hover {
+    color: var(--dark-text);
+}
+
+.footer-newsletter input[type="email"] {
+    width: 100%;
+    padding: 0.75rem 1rem; /* px-4 py-3 */
+    border-radius: 0.5rem; /* rounded-lg */
+    border: 1px solid transparent; /* border-gray-300 */
+    background-color: var(--footer-input-bg);
+    margin-bottom: 1rem; /* mb-4 */
+    font-size: 0.875rem; /* text-sm */
+    color: var(--dark-text);
+}
+.footer-newsletter input[type="email"]::placeholder {
+    color: var(--gray-text);
+}
+
+.footer-newsletter button {
+    width: 100%;
+    background-color: var(--footer-subscribe-btn);
+    color: var(--white);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600; /* font-semibold */
+    border: none;
+    cursor: pointer;
+    transition: background-color 300ms ease;
+}
+.footer-newsletter button:hover {
+    background-color: var(--darkest-bg);
+}
+
+.footer-divider {
+    border-top: 1px solid #000000; /* border-gray-300 */
+    margin-top: 3rem; /* mt-12 */
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+
+.footer-copyright-bottom {
+    font-size: 0.875rem; /* text-sm */
+    color: var(--gray-text);
+    padding-bottom: 1rem; /* Tambahkan sedikit padding bawah */
+}
+
+
+/* Font Import (untuk Inter, jika tidak tersedia secara default di browser pengguna) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
