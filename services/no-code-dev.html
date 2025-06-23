@@ -53,17 +53,141 @@
         <!-- Menu Mobile (Tersembunyi secara default, akan diaktifkan dengan JS) -->
         <div id="mobile-menu" class="mobile-menu">
             <nav class="mobile-menu-nav">
-                <a href="about.html">About</a>
-                <a href="#">Layanan</a>
-                <a href="#">Portofolio</a>
-                <a href="#">Karir</a>
-                <a href="#">Dapatkan Kuota</a>
+                <a href="/about.html">About</a>
+                <div class="dropdown">
+                    <a href="" class="has-dropdown">
+                        Services
+                        <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="/services/ui-ux.html">UI/UX Design</a>
+                        <a href="/services/brand-design.html">Brand Design</a>
+                        <a href="/services/web-dev.html">Webflow Development</a>
+                        <a href="/services/no-code-dev.html">No-Code Development</a>
+                    </div>
+                <a href="/portofolio.html">Portofolio</a>
+                <a href="/karir.html">Karir</a>
+                <a href="/dapatkankuota.html">Dapatkan Kuota</a>
                 <button class="cta-button-mobile">
                     Jadwalkan Sekarang
                 </button>
             </nav>
         </div>
     </header>
+
+        <!-- Bagian Hero (UI/UX Design Page) -->
+         <section class="service-hero-section">
+            <div class="container service-hero-content">
+                <div class="service-hero-text">
+                    <h1 class="service-hero-title">No-Code Development</h1>
+                    <p class="service-hero-description">Functional MVPs and web apps built in Bubble/FlutterFlow. Validate ideas faster without massive dev budgets. We specialize in Bubble and FlutterFlow development to create investor-ready MVPs with real functionality.</p>
+                    <button class="service-hero-button">Let's Code</button>
+                </div>
+                <div class="service-hero-image-container">
+                    <img src="https://images.unsplash.com/photo-1617729421095-8672a6d645ed?q=80&w=2669&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="[Desain UI/UX]" class="service-hero-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian "Design That Works as Hard as You Do" -->
+         <section class="design-works-section">
+            <div class="container">
+                <div class="design-works-content">
+                    <h2 class="design-works-title">Launch Faster, Spend Smarter</h2>
+                    <p class="design-works-description">Validate ideas fast with functional, investor-ready MVPs built in Bubble, FlutterFlow, or Softr. We specialize in turning complex business logic into user-friendly no-code solutions, complete with databases, automations, and API integrations—launched in weeks, not months.</p>
+                </div>
+                <div class="design-works-image-container">
+                    <img src="https://images.unsplash.com/photo-1617240016072-d92174e44171?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="[Sesi Kerja]" class="design-works-image">
+                </div>
+                <div class="design-works-features-grid">
+                    
+                    <!-- Feature Item 1 -->
+                     <div class="feature-item">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <p class="feature-item-text">Pixel Perfect</p>
+                    </div>
+                    
+                    <!-- Feature Item 2 -->
+                     <div class="feature-item">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                        <p class="feature-item-text">24/7 Support</p>
+                    </div>
+                    
+                    <!-- Feature Item 3 -->
+                     <div class="feature-item">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-2.485 0-4.5 2.015-4.5 4.5S9.515 17 12 17s4.5-2.015 4.5-4.5S14.485 8 12 8z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 1c-4.971 0-9 4.029-9 9s4.029 9 9 9 9-4.029 9-9-4.029-9-9-9zm0 16c-3.866 0-7-3.134-7-7s3.134-7 7-7 7 3.134 7 7-3.134 7-7 7z"></path></svg>
+                        <p class="feature-item-text">Money Back Guarantee</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Bagian "Our UI/UX Design Process" -->
+    <section class="design-process-section">
+        <div class="container">
+            <h2 class="design-process-title">Our No-Code Process</h2>
+            <div class="process-cards-grid">
+                <!-- Process Card 1 -->
+                <div class="process-card">
+                    <svg class="process-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.071 3.292a1 1 0 00.95.69h3.46c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.46a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                    <h3 class="process-card-title">Blueprint</h3>
+                    <p class="process-card-description">
+                        We start by mapping goals, user journeys, and core features
+                    </p>
+                </div>
+                <!-- Process Card 2 -->
+                <div class="process-card">
+                    <svg class="process-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.071 3.292a1 1 0 00.95.69h3.46c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.46a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                    <h3 class="process-card-title">Build & Integrate</h3>
+                    <p class="process-card-description">
+                        Using powerful no-code tools, we bring your product to life
+                    </p>
+                </div>
+                <!-- Process Card 3 -->
+                <div class="process-card">
+                    <svg class="process-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.071 3.292a1 1 0 00.95.69h3.46c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.46a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                    <h3 class="process-card-title">Launch & Iterate</h3>
+                    <p class="process-card-description">
+                        Go live with confidence, then refine based on real user data.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian "Our UI/UX Design Superpowers" (RE-TUNED FOR IMAGE MATCH) -->
+    <section class="design-superpowers-section">
+        <div class="design-superpowers-content">
+            <div class="superpowers-image-container">
+                <img src="https://images.unsplash.com/photo-1632923945657-ccd98efe59e3?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cHJvZ3JhbW1lciUyMGluJTIwZnJvbnQlMjBvZiUyMGNvbXB1dGVyJTIwb3IlMjBsYXB0b3B8ZW58MHwxfDB8fHww" alt="[Superpower Desain UI/UX]" class="superpowers-image">
+            </div>
+            <div class="superpowers-text-content">
+                <h2 class="superpowers-title">No-Code Development Edge</h2>
+                <div class="superpower-item">
+                    <h2 class="superpower-item-title">Smart Scaffolding</h2>
+                    <p class="superpower-item-description">
+                        We design the architecture with tomorrow in mind—modular, flexible, and built to grow. So your product won’t need a rebuild—just plug and play.
+                    </p>
+                    <div class="line-divider"></div>
+                </div>
+                <div class="superpower-item">
+                    <h2 class="superpower-item-title">API Whisperers</h2>
+                    <p class="superpower-item-description">
+                        From third-party tools to custom backends, we make complex integrations feel seamless. So everything just works, behind the scenes.
+                    </p>
+                    <div class="line-divider"></div>
+                </div>
+                <div class="superpower-item">
+                    <h2 class="superpower-item-title">Investor-Ready MVPs</h2>
+                    <p class="superpower-item-description">
+                        We craft MVPs that not only function smoothly but look the part—complete with polished demo flows that clearly communicate value
+                    </p>
+                    <div class="line-divider"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Bagian Ajakan Bertindak (CTA) -->
     <section class="cta-section">

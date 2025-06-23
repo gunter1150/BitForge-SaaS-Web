@@ -28,7 +28,8 @@
             --dropdown-border: #E5E7EB; /* Border dropdown */
             --dropdown-link-color: #374151; /* Warna teks link dropdown */
             --dropdown-link-hover-bg: #F3F4F6; /* Background hover link dropdown */
-            --dropdown-shadow: rgba(0, 0, 0, 0.1);            
+            --dropdown-shadow: rgba(0, 0, 0, 0.1);
+            --star-color: #FFD700; /* Warna bintang untuk ikon proses */
         }
 
 body {
@@ -120,144 +121,154 @@ display: flex;
 }        
 
 .dropdown-content {
-            opacity: 0; /* Mulai dengan tidak terlihat */
-            visibility: hidden; /* Sembunyikan dari interaksi mouse */
-            transition: opacity 0.3s ease, visibility 0.3s ease; /* Transisi untuk opacity dan visibility */
-            position: absolute;
-            background-color: var(--dropdown-bg);
-            min-width: 160px; /* Lebar minimum dropdown */
-            box-shadow: 0 8px 16px 0 var(--dropdown-shadow);
-            border: 1px solid var(--dropdown-border);
-            border-radius: 0.5rem; /* rounded-lg */
-            z-index: 1;
-            top: 100%; /* Tempatkan di bawah link parent */
-            left: 50%; /* Pusatkan di bawah link */
-            transform: translateX(-50%); /* Penyesuaian untuk pemusatan */
-            overflow: hidden; /* Pastikan sudut membulat */
-            pointer-events: none; /* Nonaktifkan interaksi saat tidak terlihat */
-        }
+    opacity: 0; /* Mulai dengan tidak terlihat */
+    visibility: hidden; /* Sembunyikan dari interaksi mouse */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Transisi untuk opacity dan visibility */        
+    position: absolute;
+    background-color: var(--dropdown-bg);
+    min-width: 160px; /* Lebar minimum dropdown */
+    box-shadow: 0 8px 16px 0 var(--dropdown-shadow);
+    border: 1px solid var(--dropdown-border);
+    border-radius: 0.5rem; /* rounded-lg */
+    z-index: 1;
+    top: 100%; /* Tempatkan di bawah link parent */
+    left: 50%; /* Pusatkan di bawah link */
+    transform: translateX(-50%); /* Penyesuaian untuk pemusatan */
+    overflow: hidden; /* Pastikan sudut membulat */
+    pointer-events: none; /* Nonaktifkan interaksi saat tidak terlihat */
+}
 
-        .dropdown-content a {
-            color: var(--dropdown-link-color);
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left; /* Rata kiri teks link */
-            font-weight: 500; /* font-medium */
-            transition: background-color 0.1s ease, color 0.1s ease;
-        }
+.dropdown-content a {
+    color: var(--dropdown-link-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left; /* Rata kiri teks link */
+    font-weight: 500; /* font-medium */
+    transition: background-color 0.1s ease, color 0.1s ease;
+}
 
-        .dropdown-content a:hover {
-            background-color: var(--dropdown-link-hover-bg);
-            color: var(--dark-text); /* Ubah warna teks saat hover */
-        }
+.dropdown-content a:hover {
+    background-color: var(--dropdown-link-hover-bg);
+    color: var(--dark-text); /* Ubah warna teks saat hover */
+}
 
-        .dropdown:hover .dropdown-content {
-            opacity: 1; /* Tampilkan dengan transisi */
-            visibility: visible; /* Aktifkan interaksi */
-            pointer-events: auto; /* Aktifkan interaksi mouse */
-        }
+.dropdown:hover .dropdown-content {
+    opacity: 1; /* Tampilkan dengan transisi */
+    visibility: visible; /* Aktifkan interaksi */
+    pointer-events: auto; /* Aktifkan interaksi mouse */
+}
 
 
 /* Tombol CTA Header (diperbarui) */
-        .header-cta-button {
-            background-color: var(--white);
-            color: var(--darkest-bg);
-            padding: 0.75rem 1.5rem; /* px-6 py-3 */
-            border-radius: 9999px; /* rounded-full */
-            font-weight: 600; /* font-semibold */
-            font-size: 1rem; /* text-base */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            transition: background-color 300ms ease;
-            border: none;
-            cursor: pointer;
-            white-space: nowrap; /* Pastikan teks tidak patah */
-        }
-        .header-cta-button:hover {
-            background-color: var(--gray-100);
-        }
-        .header-cta-button.hidden-mobile {
-            display: none;
-        }
-        @media (min-width: 768px) {
-            .header-cta-button.hidden-mobile {
-                display: block;
-            }
-        }
+.header-cta-button {  
+    background-color: #039b38;
+    color: var(--white);
+    padding: 0.75rem 1.5rem; /* px-6 py-3 */
+    border-radius: 9999px; /* rounded-full */
+    font-weight: 600; /* font-semibold */
+    font-size: 1rem; /* text-base */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: background-color 300ms ease;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap; /* Pastikan teks tidak patah */
+}
 
-        /* Tombol Hamburger (sembunyikan untuk desain ini di desktop, tampilkan di mobile) */
-        .hamburger-button {
-            display: block; /* Tampilkan di mobile */
-            color: var(--white); /* Warna hamburger putih */
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-        }
-        .hamburger-button svg {
-            width: 2rem; /* w-8 */
-            height: 2rem; /* h-8 */
-        }
-        @media (min-width: 768px) {
-            .hamburger-button {
-                display: none;
-            }
-        }
+.header-cta-button:hover {
+    background-color: #01b140;
+    color: var(--white);
+}
+        
+.header-cta-button.hidden-mobile {            
+    display: none;
+}
+        
+@media (min-width: 768px) {
+    .header-cta-button.hidden-mobile {
+    display: block;
+}}
 
-        /* Menu Mobile (diperbarui) */
-        .mobile-menu {
-            display: none; /* hidden */
-            background-color: var(--darkest-bg);
-            padding-top: 1rem; /* py-4 */
-            padding-bottom: 1rem; /* py-4 */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-lg */
-            position: absolute;
-            width: 100%;
-            top: 100%; /* top-full */
-            left: 0;
-        }
-        .mobile-menu.active { /* Class to show/hide with JS */
-            display: block;
-        }
-        .mobile-menu-nav {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.75rem; /* space-y-3 */
-            padding-left: 1rem; /* px-4 */
-            padding-right: 1rem; /* px-4 */
-            font-size: 1.125rem; /* text-lg */
-        }
-        .mobile-menu-nav a {
-            display: block;
-            color: var(--nav-link-color);
-            text-decoration: none;
-            padding-top: 0.5rem; /* py-2 */
-            padding-bottom: 0.5rem; /* py-2 */
-            transition: color 300ms ease;
-            width: 100%;
-            text-align: center;
-        }
-        .mobile-menu-nav a:hover {
-            color: var(--white);
-        }
-        .mobile-menu-nav .cta-button-mobile {
-            background-color: var(--white);
-            color: var(--darkest-bg);
-            padding: 0.75rem 1.5rem;
-            border-radius: 9999px; /* rounded-full */
-            width: 100%;
-            font-weight: 600;
-            margin-top: 1rem;
-            transition: background-color 300ms ease;
-            border: none;
-            cursor: pointer;
-            font-size: 1.125rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
-        .mobile-menu-nav .cta-button-mobile:hover {
-            background-color: var(--gray-100);
-        }
+
+/* Tombol Hamburger (sembunyikan untuk desain ini di desktop, tampilkan di mobile) */
+.hamburger-button {
+    display: block; /* Tampilkan di mobile */
+    color: var(--white); /* Warna hamburger putih */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+        
+.hamburger-button svg {
+    width: 2rem; /* w-8 */
+    height: 2rem; /* h-8 */
+}
+@media (min-width: 768px) {
+.hamburger-button {
+    display: none;
+}}
+
+/* Menu Mobile (diperbarui) */
+.mobile-menu {
+    display: none; /* hidden */
+    background-color: var(--darkest-bg);
+    padding-top: 1rem; /* py-4 */
+    padding-bottom: 1rem; /* py-4 */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-lg */
+    position: absolute;
+    width: 100%;
+    top: 100%; /* top-full */
+    left: 0;
+}
+        
+.mobile-menu.active { /* Class to show/hide with JS */
+display: block;
+}
+        
+.mobile-menu-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem; /* space-y-3 */
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem; /* px-4 */
+    font-size: 1.125rem; /* text-lg */
+}
+        
+.mobile-menu-nav a {
+    display: block;
+    color: var(--nav-link-color);
+    text-decoration: none;
+    padding-top: 0.5rem; /* py-2 */
+    padding-bottom: 0.5rem; /* py-2 */
+    transition: color 300ms ease;
+    width: 100%;
+    text-align: center;
+}
+        
+.mobile-menu-nav a:hover {
+    color: var(--white);
+}
+        
+.mobile-menu-nav .cta-button-mobile {
+    background-color: var(--white);
+    color: var(--darkest-bg);
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px; /* rounded-full */
+    width: 100%;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: background-color 300ms ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1.125rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+        
+.mobile-menu-nav .cta-button-mobile:hover {
+    background-color: var(--gray-100);
+}
 
         /*
     Bagian-bagian lainnya dari halaman sebelumnya (CTA, Footer)
@@ -265,6 +276,399 @@ display: flex;
     mengenai bagian atas, saya akan menyertakannya di sini.
     Anda bisa menghapus atau menyusun ulang sesuai kebutuhan.
 */
+
+/* Halaman Services Ui-Ux */
+/* Bagian Hero (UI/UX Design Page) */
+
+.service-hero-section {
+    background-color: darkblue;
+    color: var(--white);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    
+}
+
+@media (min-width: 768px) {
+    .service-hero-section {
+padding-top: 7rem;
+padding-bottom: 8rem;
+    }
+}
+
+        
+.service-hero-content {
+    display: flex;        
+    flex-direction: column;
+    align-items: center; /* Default center for mobile */
+    text-align: center;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .service-hero-content {
+        flex-direction: row;
+        text-align: left;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 4rem;
+    }}
+
+.service-hero-text {
+    max-width: 600px;
+}
+
+@media (min-width: 768px) {
+    .service-hero-text {
+        width: 50%;
+    }}
+
+.service-hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.025em;
+    color: var(--white);
+}
+
+@media (min-width: 768px) {
+    .service-hero-title {
+    font-size: 4rem;
+    margin-top: auto;
+    }
+}
+
+.service-hero-description {
+    font-size: 1.125rem;
+    line-height: 1.625;
+    color: var(--nav-link-color); /* Slightly lighter than pure white */
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+
+}
+
+.service-hero-button {
+    background-color: #039b38;
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: background-color 300ms ease;
+    border: none;
+    cursor: pointer;
+    text-decoration: none; /* If it's an anchor tag */
+    display: inline-block; /* For padding to work on anchor */
+}
+
+.service-hero-button:hover {
+    background-color: #01b140;
+    color: var(--white);
+}
+
+.service-hero-image-container {
+    width: 100%;
+    max-width: 500px; /* Adjust based on desired image size */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+@media (min-width: 768px) {
+    .service-hero-image-container {
+    width: 50%;
+    flex-shrink: 0;
+    }
+}
+
+.service-hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Design That Works Section */
+.design-works-section {
+    background-color: var(--white);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+@media (min-width: 768px) {
+    .design-works-section {
+padding-top: 4rem;
+padding-bottom: 6rem;
+    }
+}
+
+.design-works-content {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.design-works-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--dark-text);
+    margin-bottom: 1.5rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .design-works-title {
+font-size: 3rem;
+    }
+}
+
+.design-works-description {
+    font-size: 1.125rem;
+    color: var(--gray-text);
+    line-height: 1.625;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.design-works-image-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 3rem auto; /* Center image and add bottom margin */
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    overflow: hidden; /* Ensure image corners are rounded */
+}
+
+.design-works-image {
+    width: 100%;
+    height: auto;
+    display: block; /* Remove extra space below image */
+}
+
+.design-works-features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    justify-items: center; /* Center items in the grid */
+}
+@media (min-width: 768px) {
+    .design-works-features-grid {
+grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    background-color: var(--white); /* Match background for consistency */
+    /* No shadow/border for these smaller items as per image */
+}
+
+.feature-item svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--primary-blue); /* Use primary blue for icons */
+    margin-bottom: 0.75rem;
+}
+
+.feature-item-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark-text);
+}
+
+/* UI/UX Design Process Section */
+.design-process-section {
+    background-color: var(--light-bg); /* Light gray background */
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+@media (min-width: 768px) {
+    .design-process-section {
+padding-top: 4rem;
+padding-bottom: 8rem;
+    }
+}
+
+.design-process-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--dark-text);
+    text-align: center;
+    margin-bottom: 4rem;
+}
+@media (min-width: 768px) {
+    .design-process-title {
+font-size: 3rem;
+    }
+}
+
+.process-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4.2rem;
+    justify-items: center;
+}
+@media (min-width: 768px) {
+    .process-cards-grid {
+grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.process-card {
+    background-color: var(--white);
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    border: 1px solid var(--gray-100);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 350px; /* Optional: limit card width */
+}
+
+/* Mengganti .process-number dengan .process-icon untuk SVG bintang */
+.process-icon {
+    color: var(--star-color); /* Menggunakan warna bintang yang baru didefinisikan */
+    margin-bottom: 1rem;
+    width: 3rem; /* Ukuran ikon bintang */
+    height: 3rem; /* Ukuran ikon bintang */
+}
+
+.process-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-text);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+.process-card-description {
+    font-size: 1rem;
+    color: var(--gray-text);
+    line-height: 1.6;
+}
+
+/* UI/UX Design Superpowers Section - Re-tuned for exact image match */
+.design-superpowers-section {
+    background-color: var(--white);
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+@media (min-width: 768px) {
+    .design-superpowers-section {
+padding-top: 4rem;
+padding-bottom: 6rem;
+    }
+}
+
+.design-superpowers-content {
+    display: flex;
+    flex-direction: column; /* Stack on mobile */
+    gap: 3rem;
+    align-items: center; /* Center items on mobile */
+
+}
+@media (min-width: 768px) {
+    .design-superpowers-content {
+    flex-direction: row; /* Side-by-side on desktop */
+    justify-content: center; /* Center the two columns */
+    align-items: center; /* Align items to the top for more natural flow */
+    gap: 5rem; /* Space between image and text content */
+    margin-left: auto;
+    margin-right: auto;
+    }
+}
+
+.superpowers-image-container {
+    width: 100%;
+    max-width: 500px; /* Max width of image container for mobile/smaller screens */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align image to top if it's taller */
+}
+@media (min-width: 768px) {
+    .superpowers-image-container {
+    width: 45%; /* Adjusted width for image side */
+    flex-shrink: 0; /* Prevent shrinking */
+    }
+}
+
+.superpowers-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem; /* Rounded corners */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    object-fit: cover; /* Ensures image fills its space without distortion */
+}
+
+.superpowers-text-content {
+    width: 100%;
+    text-align: center; /* Center text on mobile */
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .superpowers-text-content {
+    width: 55%; /* Adjusted width for text content side */
+    text-align: left; /* Align text to left on desktop */
+    }
+}
+
+.superpowers-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--dark-text);
+    margin-bottom: 3rem; /* Adjusted from 2.5rem based on image */
+}
+@media (min-width: 768px) {
+    .superpowers-title {
+    font-size: 3rem;
+    }
+}
+
+.line-divider{
+    border-top: 1px solid #000000; /* border-gray-300 */
+    margin-top: 3rem; /* mt-12 */
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+
+.superpower-item {
+    margin-bottom: 1.5rem; /* Adjusted spacing for individual items based on image */
+    padding-bottom: 1.5rem; /* Add padding for the border */
+    border-bottom: 1px solid var(--light-gray-border); /* Subtle border like in the image */
+}
+.superpower-item:last-child {
+    margin-bottom: 0; /* No bottom margin for the last item */
+    padding-bottom: 0; /* No bottom padding for the last item */
+    border-bottom: none; /* No border for the last item */
+}
+
+.superpower-item-title {
+    font-size: 2rem; /* Adjusted from 1.5rem based on image */
+    font-weight: 600; /* Adjusted from 700 based on image */
+    color: var(--dark-text);
+    margin-bottom: 0.5rem; /* Adjusted from 0.75rem based on image */
+}
+
+.superpower-item-description {
+    font-size: 1.2rem; /* Adjusted from 1.125rem based on image */
+    color: var(--gray-text);
+    line-height: 1.6; /* Slightly tighter line height */
+}
+
+
+/* Call To Action */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
 .cta-section, .footer {
     /* Gaya dasar yang dipertahankan */
     padding-top: 4rem;
@@ -329,7 +733,8 @@ font-size: 1.25rem;
 
 }
 
-       /* Footer (NEWLY MODIFIED) */
+/* Footer */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
 .footer {
     background-color: var(--footer-bg); /* Latar belakang abu-abu terang */
     padding-top: 4rem; /* py-16 */

@@ -161,8 +161,8 @@ display: flex;
 
 /* Tombol CTA Header (diperbarui) */
         .header-cta-button {
-            background-color: var(--white);
-            color: var(--darkest-bg);
+            background-color: #039b38;
+            color: var(--white);
             padding: 0.75rem 1.5rem; /* px-6 py-3 */
             border-radius: 9999px; /* rounded-full */
             font-weight: 600; /* font-semibold */
@@ -174,7 +174,8 @@ display: flex;
             white-space: nowrap; /* Pastikan teks tidak patah */
         }
         .header-cta-button:hover {
-            background-color: var(--gray-100);
+            background-color: #01b140;
+            color: var(--white);
         }
         .header-cta-button.hidden-mobile {
             display: none;
@@ -349,7 +350,6 @@ font-size: 1.25rem;
     /* background-color: var(--gray-100); */
     /* color: var(--darkest-bg); */
     background-color: #01b140;
-
 }
 
 /* Bagian Gambar Besar di Bawah Hero */
@@ -880,11 +880,10 @@ line-height: 1.1;
     margin-bottom: 2rem; /* mb-8 */
 }
 
-.pageabout-button {
+.pageabout-btn {
     /* background-color: var(--primary-blue); Gunakan warna biru utama */
-    background-color: var(--white);
-    color: var(--darkest-bg);
-    padding: 1rem 2rem; /* px-8 py-4 */
+    background-color: #039b38;
+    color: var(--white);    padding: 1rem 2rem; /* px-8 py-4 */
     border-radius: 0.75rem; /* rounded-xl */
     font-size: 1.125rem; /* text-lg */
     font-weight: 600;
@@ -893,8 +892,8 @@ line-height: 1.1;
     border: none;
     cursor: pointer;
 }
-.pageabout-button:hover {
-    background-color: var(--gray-text);
+.pageabout-btn:hover {
+    background-color: #01b140;
     color: var(--white);
 }
 
@@ -1932,7 +1931,6 @@ font-size: 1.25rem;
 .cta-button:hover {
     /* background-color: var(--orange-600); */
     background-color: #01b140;
-
 }
 
        /* Footer (NEWLY MODIFIED) */
