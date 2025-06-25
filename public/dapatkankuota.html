@@ -87,62 +87,75 @@
         </div>
     </section>
 
-    <section class="career-section">
-        <div class="container">
-            <div class="career-content">
-                <h2 class="career-title">Mari Ubah Visi Anda Menjadi Sebuah Realita Yang kuat.</h2>
-                <p class="career-description">Bagikan Detail Proyek anda, dan akan kami sediakan kuota terbatas yang searah dengan tujuan dan budget anda. Tim kami siap sedia membawa ide - ide anda terasa hidup dengan kreativitas, strategi, dan presisi</p>            
-            </div>
-        
-                    <div class="contact-form-wrapper">
-            <form class="contact-form">
+    <!-- Bagian Form -->
+    <section class="contact-form-section">
+        <h2 class="form-title">Bagikan Detail Proyek Anda</h2>
+        <p class="design-works-description" style="margin-bottom: 2rem;">
+                Kami akan siapkan kuota terbatas yang searah dengan tujuan dan budget Anda. Tim kami siap sedia membawa ide-ide Anda terasa hidup dengan kreativitas, strategi, dan presisi.
+            </p>
+        <div class="contact-form-card">
+            <form id="projectForm">
                 <div class="form-group">
                     <label for="name" class="form-label">Nama Anda</label>
-                    <input type="text" id="name" name="name" class="form-input" placeholder="">
+                    <input type="text" id="name" class="form-input" placeholder="Nama Anda" required>
                 </div>
-
                 <div class="form-group">
                     <label for="email" class="form-label">Email Anda</label>
-                    <input type="email" id="email" name="email" class="form-input" placeholder="">
+                    <input type="email" id="email" class="form-input" placeholder="Email Anda" required>
                 </div>
-
                 <div class="form-group">
-                    <label for="phone" class="form-label">Nomor Telfon</label>
-                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="">
+                    <label for="phone" class="form-label">Nomor Telepon</label>
+                    <input type="tel" id="phone" class="form-input" placeholder="Nomor Telepon" required>
                 </div>
-
-                <div class="form-group services-checkbox-group">
+                <div class="form-group">
                     <label class="form-label">Pilih Layanan Untuk Anda</label>
-                    <div class="checkbox-options">
-                        <label class="checkbox-container">
-                            <input type="checkbox" name="service" value="ui-ux">
+                    <div class="form-options-grid">
+                        <label class="form-option-item">
+                            <input type="checkbox" name="service" value="UI/UX Design">
                             UI/UX Design
                         </label>
-                        <label class="checkbox-container">
-                            <input type="checkbox" name="service" value="brand-design">
+                        <label class="form-option-item">
+                            <input type="checkbox" name="service" value="Brand Design">
                             Brand Design
                         </label>
-                        <label class="checkbox-container">
-                            <input type="checkbox" name="service" value="webflow-development">
+                        <label class="form-option-item">
+                            <input type="checkbox" name="service" value="Webflow Development">
                             Webflow Development
                         </label>
-                        <label class="checkbox-container">
-                            <input type="checkbox" name="service" value="no-code-development">
+                        <label class="form-option-item">
+                            <input type="checkbox" name="service" value="No-code Development">
                             No-code Development
                         </label>
                     </div>
                 </div>
-
                 <div class="form-group">
                     <label for="project-description" class="form-label">Jelaskan Secara Singkat Proyek Anda</label>
-                    <textarea id="project-description" name="project_description" class="form-textarea" rows="5" placeholder=""></textarea>
+                    <textarea id="project-description" class="form-textarea" placeholder="Jelaskan proyek Anda..."></textarea>
                 </div>
-
-                <button type="submit" class="submit-button">Kirim</button>
+                <button type="submit" class="form-submit-button" id="submitButton">
+                    Kirim
+                </button>
             </form>
         </div>
-        </div>
     </section>
+
+    <!-- Modal Pop-up (BARU) -->
+    <div id="successModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close-button" id="closeModalButton">&times;</button>
+            <span class="modal-icon">&#10003;</span> <!-- Checkmark icon -->
+            <h3 class="modal-title">Formulir Terkirim!</h3>
+            <p class="modal-description">
+                Terima kasih atas pesan Anda. Kami akan segera menghubungi Anda.
+            </p>
+            <div class="modal-copy-link-container">
+                <span id="copyText" class="modal-copy-link-text"></span>
+                <button class="modal-copy-button" id="copyButton">Salin</button>
+            </div>
+            <button class="modal-action-button" id="okButton">OK</button>
+        </div>
+    </div>
+
 
     <!-- Bagian Ajakan Bertindak (CTA) -->
     <section class="cta-section">
@@ -247,7 +260,100 @@
                     });
                 });
             }
+
+                        // Fungsionalitas Form dan Modal Pop-up
+            const projectForm = document.getElementById('projectForm');
+            const submitButton = document.getElementById('submitButton');
+            const successModal = document.getElementById('successModal');
+            const closeModalButton = document.getElementById('closeModalButton');
+            const okButton = document.getElementById('okButton');
+            const copyButton = document.getElementById('copyButton');
+            const copyTextElement = document.getElementById('copyText');
+            const serviceOptions = document.querySelectorAll('.form-option-item');
+
+            // Add event listener for service option selection
+            serviceOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    const checkbox = this.querySelector('input[type="checkbox"]');
+                    checkbox.checked = !checkbox.checked; // Toggle checkbox state
+                    this.classList.toggle('selected', checkbox.checked); // Toggle 'selected' class
+                });
+            });
+
+            // Handle form submission
+            if (projectForm) {
+                projectForm.addEventListener('submit', function(event) {
+                    event.preventDefault(); // Mencegah pengiriman formulir default
+
+                    // Mengambil nilai dari setiap input
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const phone = document.getElementById('phone').value;
+                    const projectDescription = document.getElementById('project-description').value;
+
+                    // Mengambil layanan yang dipilih
+                    const selectedServices = Array.from(document.querySelectorAll('input[name="service"]:checked'))
+                                                .map(checkbox => checkbox.value)
+                                                .join(', ');
+
+                    // Membuat string data yang akan ditampilkan di modal dan disalin
+                    const formData = `Nama: ${name}\nEmail: ${email}\nTelepon: ${phone}\nLayanan Dipilih: ${selectedServices || 'Tidak ada'}\nDeskripsi Proyek: ${projectDescription || 'Tidak ada'}`;
+
+                    copyTextElement.textContent = formData; // Set text for copying
+
+                    // Menampilkan modal
+                    successModal.classList.add('active');
+
+                    // Reset formulir setelah pengiriman (opsional)
+                    projectForm.reset();
+                    serviceOptions.forEach(option => option.classList.remove('selected')); // Hapus kelas 'selected'
+                });
+            }
+
+            // Menutup modal ketika tombol tutup diklik
+            if (closeModalButton) {
+                closeModalButton.addEventListener('click', function() {
+                    successModal.classList.remove('active');
+                });
+            }
+
+            // Menutup modal ketika tombol OK diklik
+            if (okButton) {
+                okButton.addEventListener('click', function() {
+                    successModal.classList.remove('active');
+                });
+            }
+
+            // Menutup modal ketika mengklik di luar konten modal
+            if (successModal) {
+                successModal.addEventListener('click', function(event) {
+                    if (event.target === successModal) {
+                        successModal.classList.remove('active');
+                    }
+                });
+            }
+
+            // Fungsionalitas Salin ke Clipboard
+            if (copyButton) {
+                copyButton.addEventListener('click', function() {
+                    const textToCopy = copyTextElement.textContent;
+                    const textArea = document.createElement('textarea');
+                    textArea.value = textToCopy;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    try {
+                        document.execCommand('copy');
+                        alert('Teks berhasil disalin!'); // Use a custom message box in a real app
+                    } catch (err) {
+                        console.error('Gagal menyalin teks:', err);
+                        alert('Gagal menyalin teks.'); // Use a custom message box
+                    }
+                    document.body.removeChild(textArea);
+                });
+            }
         });
+
+        
 
     </script>
 </body>

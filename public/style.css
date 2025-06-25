@@ -1688,179 +1688,261 @@ font-size: 1.25rem;
 
 
 /* Bagian Halaman Dapatkan Kuota */
-    .contact-form-section {
-        background-color: var(--white); /* White background */
-        padding-top: 6rem; /* py-24 */
-        padding-bottom: 6rem; /* py-24 */
-    }
-    @media (min-width: 768px) {
-        .contact-form-section {
-            padding-top: 8rem; /* md:py-32 */
-            padding-bottom: 8rem; /* md:py-32 */
-        }
-    }
+.contact-form-section {
+    background-color: var(--white);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-    .contact-form-header {
-        text-align: center;
-        margin-bottom: 4rem; /* mb-16 */
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+.contact-form-card {
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    padding: 2.5rem;
+    border: 1px solid var(--gray-100);
+    width: 100%;
+    max-width: 600px;
+}
 
-    .contact-form-title {
-        font-size: 2.5rem; /* text-4xl */
-        font-weight: 800; /* font-extrabold */
-        color: var(--dark-text);
-        line-height: 1.2;
-        margin-bottom: 1.5rem; /* mb-6 */
-    }
-    @media (min-width: 768px) {
-        .contact-form-title {
-            font-size: 3rem; /* md:text-5xl */
-        }
-    }
+.form-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--dark-text);
+    text-align: center;
+    margin-bottom: 2rem;
+}
 
-    .contact-form-description {
-        font-size: 1.125rem; /* text-lg */
-        color: var(--gray-text);
-        line-height: 1.625;
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+.form-group {
+    margin-bottom: 1.5rem;
+}
 
-    .contact-form-wrapper {
-        display: flex;
-        justify-content: center;
-    }
+.form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--dark-text);
+    margin-bottom: 0.5rem;
+}
 
-    .contact-form {
-        width: 100%;
-        max-width: 700px; /* Max width of the form */
-        background-color: var(--white);
-        border-radius: 0.75rem; /* rounded-xl */
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
-        padding: 2.5rem; /* p-10 */
-        border: 1px solid var(--gray-100);
-    }
-    @media (min-width: 768px) {
-        .contact-form {
-            padding: 3rem 4rem; /* md:p-12 md:px-16 */
-        }
-    }
+.form-input, .form-textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--form-input-border);
+    background-color: var(--form-input-bg);
+    font-size: 1rem;
+    color: var(--dark-text);
+    box-sizing: border-box; /* Ensures padding doesn't increase width */
+}
 
-    .form-group {
-        margin-bottom: 1.5rem; /* mb-6 */
-    }
+.form-textarea {
+    min-height: 100px;
+    resize: vertical;
+}
 
-    .form-label {
-        display: block;
-        font-size: 0.875rem; /* text-sm */
-        font-weight: 600; /* font-semibold */
-        color: var(--dark-text);
-        margin-bottom: 0.5rem; /* mb-2 */
+.form-options-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+@media (min-width: 480px) { /* sm:grid-cols-2 */
+    .form-options-grid {
+grid-template-columns: repeat(2, 1fr);
     }
+}
 
-    .form-input,
-    .form-textarea {
-        width: 100%;
-        padding: 0.75rem 1rem; /* px-4 py-3 */
-        border-radius: 0.5rem; /* rounded-lg */
-        border: 1px solid var(--form-input-border); /* Border lebih jelas */
-        background-color: var(--form-input-bg); /* Latar belakang input lebih gelap */
-        font-size: 1rem; /* text-base */
-        color: var(--dark-text);
-        transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    }
+.form-option-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--form-input-border);
+    background-color: var(--form-input-bg);
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
 
-    .form-input:focus,
-    .form-textarea:focus {
-        outline: none;
-        border-color: var(--primary-blue);
-        box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2); /* ring-2, ring-primary-blue */
-        background-color: var(--white); /* Kembali ke putih saat fokus */
-    }
+.form-option-item input[type="checkbox"] {
+    margin-right: 0.75rem;
+    accent-color: var(--primary-blue); /* Warna centang checkbox */
+    width: 1rem;
+    height: 1rem;
+}
 
-    .form-textarea {
-        resize: vertical; /* Allow vertical resizing */
-    }
+.form-option-item.selected {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: var(--white);
+}
 
-    .checkbox-options {
-        display: grid;
-        grid-template-columns: 1fr; /* Default to one column for mobile */
-        gap: 0.75rem; /* gap-3 */
-    }
-    @media (min-width: 640px) { /* sm:grid-cols-2 */
-        .checkbox-options {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
+.form-option-item.selected .form-label {
+    color: var(--white);
+}
 
-    .checkbox-container {
-        display: flex;
-        align-items: center;
-        font-size: 1rem; /* text-base */
-        color: var(--dark-text);
-        cursor: pointer;
-        padding: 0.75rem 1rem; /* px-4 py-3 - padding disesuaikan */
-        border-radius: 0.5rem; /* rounded-lg */
-        background-color: var(--form-checkbox-bg); /* Latar belakang checkbox */
-        border: 1px solid var(--form-checkbox-border); /* Border checkbox */
-        transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-    }
-    .checkbox-container:hover {
-        background-color: var(--gray-100); /* Sedikit lebih gelap saat hover */
-        box-shadow: 0 2px 4px -1px rgba(0,0,0,0.05); /* Sedikit shadow saat hover */
-    }
+.form-option-item:hover {
+    border-color: var(--primary-blue);
+}
 
-    .checkbox-container input[type="checkbox"] {
-        appearance: none; /* Hide default checkbox */
-        -webkit-appearance: none;
-        width: 1.25rem; /* w-5 */
-        height: 1.25rem; /* h-5 */
-        border: 2px solid var(--gray-400); /* border-gray-400 */
-        border-radius: 0.25rem; /* rounded */
-        margin-right: 0.75rem; /* mr-3 */
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: background-color 0.2s ease, border-color 0.2s ease;
-        flex-shrink: 0; /* Mencegah checkbox mengecil */
-    }
+.form-option-item.selected:hover {
+    background-color: var(--indigo-700);
+    border-color: var(--indigo-700);
+}
 
-    .checkbox-container input[type="checkbox"]:checked {
-        background-color: var(--primary-blue); /* bg-primary-blue */
-        border-color: var(--primary-blue);
-    }
+.form-submit-button {
+    width: 100%;
+    background-color: var(--dark-text);
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-    .checkbox-container input[type="checkbox"]:checked::before {
-        content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="%23ffffff" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75L10.5 18.75L19.5 5.25"></path></svg>');
-        display: block;
-        width: 1rem; /* w-4 */
-        height: 1rem; /* h-4 */
-    }
+.form-submit-button:hover {
+    background-color: #333; /* Slightly lighter dark for hover */
+}
 
-    .submit-button {
-        display: block;
-        width: 10em;
-        background-color: var(--dark-text); /* Warna tombol disesuaikan menjadi dark-text */
-        color: var(--white);
-        padding: 1rem 2rem; /* px-8 py-4 */
-        border-radius: 0.75rem; /* rounded-xl */
-        font-size: 1.125rem; /* text-lg */
-        font-weight: 600; /* font-semibold */
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease, box-shadow 0.3s ease;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
-    }
+/* Modal Pop-up Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s ease, opacity 0.3s ease;
+}
 
-    .submit-button:hover {
-        background-color: var(--gray-text); /* Warna hover tombol disesuaikan */
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* hover:shadow-lg */
-    }
+.modal-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: var(--modal-bg);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    position: relative;
+    transform: translateY(-20px); /* Initial slight upward offset */
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0); /* Slide into place */
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--modal-close-color);
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.modal-close-button:hover {
+    color: var(--dark-text);
+}
+
+.modal-icon {
+    color: var(--primary-blue);
+    font-size: 3rem; /* Ukuran ikon */
+    margin-bottom: 1rem;
+    display: inline-block; /* Ensure vertical alignment */
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--modal-text-color);
+    margin-bottom: 1rem;
+}
+
+.modal-description {
+    font-size: 1rem;
+    color: var(--gray-text);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.modal-copy-link-container {
+    display: flex;
+    align-items: center;
+    background-color: var(--light-bg);
+    border: 1px solid var(--gray-100);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    word-break: break-all; /* Ensure long text breaks */
+}
+
+.modal-copy-link-text {
+    flex-grow: 1;
+    font-size: 0.875rem;
+    color: var(--dark-text);
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Show ellipsis for overflow */
+    cursor: text; /* Indicate it's copyable */
+}
+
+.modal-copy-button {
+    background-color: var(--modal-button-bg);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-left: 0.75rem;
+}
+
+.modal-copy-button:hover {
+    background-color: var(--modal-button-hover-bg);
+}
+
+.modal-action-button {
+    background-color: var(--modal-button-bg);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.modal-action-button:hover {
+    background-color: var(--modal-button-hover-bg);
+}
+
 /* ------------------------------------------------------------------------------------------------ */
 
 
