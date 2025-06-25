@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitForge | Your SaaS Best Choice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-inter bg-white">
+
+
+    <!-- Header / Navigasi Bar (Disesuaikan untuk desain baru) -->
+    <header class="header">
+        <div class="container header-content">
+            <!-- Logo Agensi -->
+            <a href="index.html" class="logo">
+                <img src="https://placehold.co/150x40/141720/ADFF2F?text=BITFORGE" alt="WEB ROCKET Logo" class="logo-img">
+            </a>
+
+            <!-- Navigasi Utama (Untuk Desktop) -->
+            <nav class="nav-desktop">
+                <a href="about.html">About</a>
+                <div class="dropdown">
+                    <a href="#" class="has-dropdown">
+                        Services
+                        <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="/services/ui-ux.html">UI/UX Design</a>
+                        <a href="/services/brand-design.html">Brand Design</a>
+                        <a href="/services/web-dev.html">Webflow Development</a>
+                        <a href="/services/no-code-dev.html">No-Code Development</a>
+                    </div>
+                </div>
+                <a href="portofolio.html">Portofolio</a>
+                <a href="karir.html">Karir</a>
+                <a href="dapatkankuota.html">Dapatkan Kuota</a>
+            </nav>
+
+            <!-- Tombol CTA Header (Untuk Desktop) -->
+            <div class="hidden-mobile">
+                <button class="header-cta-button">
+                    Jadwalkan Sekarang
+                </button>
+            </div>
+
+            <!-- Tombol Hamburger (Untuk Mobile) -->
+            <button class="hamburger-button" aria-label="Toggle navigation">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+
+        <!-- Menu Mobile (Tersembunyi secara default, akan diaktifkan dengan JS) -->
+        <div id="mobile-menu" class="mobile-menu">
+            <nav class="mobile-menu-nav">
+                <a href="about.html">About</a>
+                <a href="#">Layanan</a>
+                <a href="#">Portofolio</a>
+                <a href="#">Karir</a>
+                <a href="#">Dapatkan Kuota</a>
+                <button class="cta-button-mobile">
+                    Jadwalkan Sekarang
+                </button>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Bagian Hero (Disesuaikan agar sesuai dengan gambar) -->
+    <section class="hero-section">
+        <div class="container hero-content">
+            <h1 class="left-title">
+                Kami Mendesain & Membangun Pengalaman Digital Yang bergerak memenuhi Kebutuhan
+            </h1>
+        </div>
+
+        <div class="container pageabout-content">
+            <!-- Gambar Bagian Tentang Kami -->
+            <div class="pgabt-img">    
+                <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVvcGxlJTIwd29ya2luZ3xlbnwwfDF8MHx8fDA%3D" alt="Tim Kerja" class="pgabt-img">
+            </div>
+            
+            <div class="pgabt-img">    
+                <img src="https://images.unsplash.com/photo-1552960394-c81add8de6b8?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVvcGxlJTIwd29ya2luZ3xlbnwwfDF8MHx8fDA%3D" alt="Tim Kerja" class="pgabt-img">
+            </div>
+
+            <!-- Konten Teks Bagian Tentang Kami -->
+            <div class="pageabout-text">
+                <p class="pageabout-description">
+                    Kami bukanlah tempat mendesain biasa. Kami adalah studio kreatif strategis yang memadukan estetika yang memukau dengan fungsionalitas yang luar biasa. Sejak 2017, kami telah membantu lebih dari 100 perusahaan rintisan, agensi, dan perusahaan rintisan skala atas mengubah ide mereka menjadi situs web, aplikasi, dan merek berkinerja tinggi yang menonjol dan menghasilkan konversi.
+                </p>
+                <button class="pageabout-btn">
+                    Know More About Us
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow -->
+    <section class="workflow-section">
+        <div class="container">
+            <h2 class="workflow-title">Cara Kerja Kami: Tanpa Rasa Sakit, Terbukti, Sempurna</h2>
+            <div class="workflow-grid">
+
+                <div class="workflow-card">
+                    <div class="workflow-stars">
+                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.071 3.292a1 1 0 00.95.69h3.46c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.46a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                    </div>
+
+                    <h2 class="workflow-card-title">Menemukan</h2>
+                    <p class="work-card-description">Kami menyelami tujuan Anda secara mendalam, dan "hal-hal yang harus dimiliki" untuk menyusun rencana pertempuran.</p>
+
+                    <div class="info-step">
+                        <h2>Step 1</h2>
+                    </div>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="workflow-stars">
+                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.071 3.292a1 1 0 00.95.69h3.46c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.46a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                    </div>
+
+                    <h2 class="workflow-card-title">Mendesain & Membangun</h2>
+                    <p class="work-card-description">Anda akan melihat hasil kerja cepat dengan titik pemeriksaan untuk menyempurnakan setiap detail.</p>
+
+                    <div class="info-step">
+                        <h2>Step 2</h2>
+                    </div>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="workflow-stars">
+                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.071 3.292a1 1 0 00.95.69h3.46c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.46a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                    </div>
+
+                    <h2 class="workflow-card-title">Luncurkan & Berkembang</h2>
+                    <p class="work-card-description">Kami tidak hanya memberikan, kami mengoptimalkan untuk kesuksesan jangka panjang.</p>
+
+                    <div class="info-step">
+                        <h2>Step 3</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Penghargaaan -->
+    <section class="recognitionawards-section">
+        <div class="container">
+            <h2 class="recognitionawards-title">Pengakutan & Penghargaan</h2>
+            <div class="recognitionawards-grid">
+                <div class="image-awards">
+                    <img src="https://websitedemos.net/web-agency-04/wp-content/uploads/sites/1533/2025/04/awards.jpg" alt="" class="image-awards">
+                </div>
+                <div class="list-awards">
+                    <div class="rewards">
+                        <div class="title-awards">
+                            <h1 class="title">Best of 2nd Year Website Project </h1>
+                            <h4>2025</h4>
+                        </div>
+                        <p class="description-awards">Projek Website Terbaik Tahun Kedua Mahasiswa</p>
+                    </div>
+                    <hr class="container">
+
+                    <div class="rewards">
+                        <div class="title-awards">
+                            <h1 class="title">Pemenang Utama Proyek Web 2025</h1>
+                            <h3>2025</h3>
+                        </div>
+                        <p class="description-awards">Skor terbaik satu angkatan</p>
+                    </div>
+                    <hr class="container">
+
+                    <div class="rewards">
+                        <div class="title-awards">
+                            <h1 class="title">Juara Inovasi Web Mahasiswa</h1>
+                            <h3>2025</h3>
+                        </div>
+                        <p class="description-awards">Website Paling Interakti dengan perolehan skor terbaik</p>
+                    </div>
+                    <hr class="container">
+
+                    <div class="rewards">
+                        <div class="title-awards">
+                            <h1 class="title">Desain Antarmuka Terbaik (Best UI Design)</h1>
+                            <h3>2025</h3>
+                        </div>
+                        <p class="description-awards">Desain UI Favorit Juri</p>
+                        
+                    </div>
+                    <hr class="container">
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Founder -->
+<section class="disruptive-team-section">
+    <div class="container">
+        <div class="disruptive-team-content">
+            <h2 class="disruptive-team-title">Pemikir dibalik Semua Ini</h2>
+        </div>
+        <div class="team-grid">
+            <!-- Team Member 1 -->
+            <div class="team-member-card">
+                <img src="https://placehold.co/300x300/F3F4F6/1F2937?text=Alex+Chen" alt="Alex Chen" class="team-member-avatar">
+                <h3 class="team-member-name">Alex Chen</h3>
+                <p class="team-member-title">Co-Founder</p>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="team-member-card">
+                <img src="https://placehold.co/300x300/F3F4F6/1F2937?text=Jordan+Bennett" alt="Jordan Bennett" class="team-member-avatar">
+                <h3 class="team-member-name">Jordan Bennett</h3>
+                <p class="team-member-title">Creative Director</p>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="team-member-card">
+                <img src="https://placehold.co/300x300/F3F4F6/1F2937?text=Taylor+Morgan" alt="Taylor Morgan" class="team-member-avatar">
+                <h3 class="team-member-name">Taylor Morgan</h3>
+                <p class="team-member-title">Head of Client Strategy</p>
+            </div>
+            <!-- Team Member 4 -->
+            <div class="team-member-card">
+                <img src="https://placehold.co/300x300/F3F4F6/1F2937?text=Alex+Chen" alt="Alex Chen" class="team-member-avatar">
+                <h3 class="team-member-name">Alex Chen</h3>
+                <p class="team-member-title">Co-Founder</p>
+            </div>
+            <!-- Team Member 5 -->
+            <div class="team-member-card">
+                <img src="https://placehold.co/300x300/F3F4F6/1F2937?text=Jordan+Bennett" alt="Jordan Bennett" class="team-member-avatar">
+                <h3 class="team-member-name">Jordan Bennett</h3>
+                <p class="team-member-title">Creative Director</p>
+            </div>
+            <!-- Team Member 6 -->
+            <div class="team-member-card">
+                <img src="https://placehold.co/300x300/F3F4F6/1F2937?text=Taylor+Morgan" alt="Taylor Morgan" class="team-member-avatar">
+                <h3 class="team-member-name">Taylor Morgan</h3>
+                <p class="team-member-title">Head of Client Strategy</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Bagian Ajakan Bertindak (CTA) -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">
+                Siap Memulai Proyek Digital Anda?
+            </h2>
+            <p class="cta-description">
+                Jangan lewatkan kesempatan untuk membawa bisnis Anda ke tingkat selanjutnya. Mari diskusikan ide Anda hari ini!
+            </p>
+            <button class="cta-button">
+                Jadwalkan Konsultasi Gratis
+            </button>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main-content">
+                <!-- Kolom 1: Logo & Deskripsi -->
+                <div class="footer-col footer-logo-col">
+                    <img src="https://placehold.co/150x40/141720/ADFF2F?text=BITFORGE" alt="WEB ROCKET Logo" class="logo-img">
+                    <p class="footer-description">
+                        We craft high-performance digital experiences that drive real business results.
+                    </p>
+                    <div class="footer-social-icons">
+                        <!-- Placeholder for social icons -->
+                        <div class="footer-social-icon">
+                            <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10v4h3v7h4v-7h3l1-4h-4V7a1 1 0 011-1h3V2h-3a5 5 0 00-5 5v3H7z"></path></svg>
+                        </div>
+                        <div class="footer-social-icon">
+                            <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.46 6c-.77.34-1.6.56-2.46.66.89-.53 1.57-1.37 1.89-2.37-.83.49-1.75.83-2.73 1.02-.79-.84-1.92-1.37-3.17-1.37-2.39 0-4.34 1.95-4.34 4.34 0 .34.04.67.11.98-3.6-.18-6.8-1.9-8.94-4.57-.37.64-.58 1.39-.58 2.18 0 1.5.77 2.81 1.94 3.59-.72-.02-1.39-.22-1.98-.55v.05c0 2.11 1.5 3.88 3.5 4.29-.37.1-.76.15-1.16.15-.28 0-.55-.03-.82-.08.56 1.75 2.18 3.02 4.1 3.06-1.49 1.17-3.37 1.87-5.41 1.87-.35 0-.69-.02-1.03-.06C2.65 20.46 4.93 21 7.37 21c7.22 0 11.17-5.96 11.17-11.17 0-.17-.01-.34-.01-.51.77-.56 1.45-1.26 1.98-2.06z"></path></svg>
+                        </div>
+                        <div class="footer-social-icon">
+                            <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.78 2H4.22C3.54 2 3 2.54 3 3.22v17.56C3 21.46 3.54 22 4.22 22h15.56c.68 0 1.22-.54 1.22-1.22V3.22C21 2.54 20.46 2 19.78 2zM12 17.5c-2.485 0-4.5-2.015-4.5-4.5s2.015-4.5 4.5-4.5 4.5 2.015 4.5 4.5-2.015 4.5-4.5 4.5zm5.5-8.5c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z"></path></svg>
+                        </div>
+                        <div class="footer-social-icon">
+                            <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2.002 10.662C2.002 11.69 2.002 12.718 2.002 13.746H5.438C5.438 12.718 5.438 11.69 5.438 10.662H2.002zM7.332 2H16.67A7.332 7.332 0 0124 9.332v5.336A7.332 7.332 0 0116.668 22H7.332A7.332 7.332 0 010 14.668V9.332A7.332 7.332 0 017.332 2zm2.775 8.795L12 11.41l1.893-.615 2.128-1.554-1.282-2.128c-.29-.48-.667-.857-1.147-1.147-.48-.29-.982-.48-1.52-.48s-1.04.19-1.52.48c-.48.29-.857.667-1.147 1.147L8.107 9.84zm-4.707 3.868h-2.129v-5.336h2.129v5.336zm14.707 0h-2.129v-5.336h2.129v5.336z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolom 2: Quick Links -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Quick Links</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kolom 3: Services -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Services</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Brand Design</a></li>
+                        <li><a href="#">Webflow Development</a></li>
+                        <li><a href="#">No-Code Development</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kolom 4: Newsletter -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Get the Latest Inspiration</h4>
+                    <div class="footer-newsletter">
+                        <input type="email" placeholder="Enter your email *">
+                        <button type="submit">Subscribe Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+            <p class="footer-copyright-bottom">&copy; 2025 Agency All rights reserved</p>
+        </div>
+    </footer>
+
+
+    <!-- Script untuk Toggle Menu Mobile (tetap sama) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('.hamburger-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton) { // Pastikan tombol ada sebelum menambahkan event listener
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('active');
+                });
+            }
+
+            // Sembunyikan menu mobile ketika tautan diklik (jika navigasi satu halaman)
+            if (mobileMenu) {
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        if (mobileMenu.classList.contains('active')) {
+                            mobileMenu.classList.remove('active');
+                        }
+                    });
+                });
+            }
+        });
+    </script>    
+</body>
+</html>
